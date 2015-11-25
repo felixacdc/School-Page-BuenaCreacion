@@ -6,3 +6,12 @@
 	color: #fff !important;
 	background-color: #080808 !important;
 }
+
+#face{
+	cursor: pointer;
+}
+
+textarea{
+	resize:none;
+}
+
