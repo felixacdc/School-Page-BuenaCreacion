@@ -37,7 +37,6 @@ $(document).ready(function(){
 		$(this).children().first().next().find("p").addClass("animated fadeOutDown");
 	});
 	
-	
 });
 
 
