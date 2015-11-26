@@ -1,19 +1,73 @@
+/*=================== VARIABLES ==================*/
+var ejecutar = true;
+var verifyEmail = /^([a-zA-Z]+[a-zA-Z0-9._-]*)@{1}([a-z1-9\.]{2,})\.([a-z]{2,3})$/;
+var verifyComment = /^[a-zA-Z0-9.,-\/\* ñáéíóú]*$/;
 var url;
+/*=================== END VARIABLES ==================*/
 
-function clean(){
-	$("textarea").val(" ");
-	$("textarea").val($("textarea").val().trim());
+/*=================== FUNCTIONS ==================*/
 
-	$("input").val(" ");
-	$("input").val($("textarea").val().trim());
+function fnEmpty(){
+	$("#inputEmail").val(" ");
+	$("#inputEmail").val($("#inputEmail").val().trim());
+
+	$("#textArea").val(" ");
+	$("#textArea").val($("#textArea").val().trim());
 }
+
+function fnClean(){
+	$('#inputEmail').val($('#inputEmail').val().trim());
+	$("#textArea").val($("#textArea").val().trim());
+}
+
+function generalValidacion(element, sms){
+	$(element).parent().parent().addClass("has-error has-feedback");
+	$(element).parent().siblings('label').text(sms);
+	$(element).parent().siblings('label').addClass("animated bounceIn retraso-2");
+	$(element).parent().siblings('label').fadeIn();
+	ejecutar = false;
+}
+
+function resetClass(){
+	$('.control-label').removeClass('bounceOutLeft');
+}
+
+function fnValidate(){
+	ejecutar = true;
+	fnClean();
+	resetClass()
+
+	if ($('#inputEmail').val()==""){
+		generalValidacion($('#inputEmail'),'Ingrese el correo electronico');
+	} else if (!verifyEmail.test($('#inputEmail').val())){
+		generalValidacion($('#inputEmail'),'Correo Electronico invalido');
+	}
+
+	if ($('#textArea').val()==""){
+		generalValidacion($('#textArea'),'Ingrese un comentario');
+	} else if (!verifyComment.test($('#textArea').val())){
+		generalValidacion($('#textArea'),'Comentario contine caracteres no validos');
+	}
+
+}
+
+
+function fnLoadStartup(){
+	$("#first").addClass("activeOption");
+	$("#first a").click();
+}
+
+/*=================== END FUNCTIONS ==================*/
+
+/*=================== BODY JS ==================*/
 
 $(document).ready(function(){
 
-	clean();
+	fnEmpty();
+	fnLoadStartup();
 
-	$("#first").addClass("activeOption");
-	$("#first a").click();
+	$('#buttonSend').click(fnValidate);
+
 
 	$(".navbar-nav li").click(function(){
 		$(".activeOption").removeClass("activeOption");
@@ -26,4 +80,17 @@ $(document).ready(function(){
   		win.focus();
 	});
 
+	$(document).delegate('input','focus',function(){
+		$(this).parent().siblings('label').fadeOut().addClass('bounceOutLeft');
+		$(this).parent().parent().removeClass('has-error has-feedback');
+	});
+
+	$(document).delegate('textarea','focus',function(){
+		$(this).parent().siblings('label').fadeOut().addClass('bounceOutLeft');
+		$(this).parent().parent().removeClass('has-error has-feedback');
+	});
+
+
 });
+
+/*=================== END BODY JS ==================*/

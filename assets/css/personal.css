@@ -1,6 +1,13 @@
+
+/* ============= SELECTORES DE TIPO O ETIQUETA ==============*/
+
 textarea{
 	resize:none;
 }
+
+/* ============= FIN SELECTORES DE TIPO O ETIQUETA ==============*/
+
+/* ============= SELECTORES DE CLASE ==============*/
 
 .divider1{
 	margin-top: 0px !important;
@@ -15,13 +22,20 @@ textarea{
 	background-color: #080808 !important;
 }
 
-#face{
-	cursor: pointer;
+.control-label{
+	text-align: left !important;
 }
 
 .listOfCourses{
 	line-height: 1;
 }
 
+/* ============= FIN SELECTORES DE CLASE ==============*/
 
+/* ============= SELECTORES DE ID ==============*/
 
+#face{
+	cursor: pointer;
+}
+
+/* ============= END SELECTORES DE ID ==============*/
