@@ -49,6 +49,10 @@ function fnValidate(){
 		generalValidacion($('#textArea'),'Comentario contine caracteres no validos');
 	}
 
+	if (ejecutar){
+		document.createElement('form').submit.call(document.getElementById('formSend'));
+	}
+
 }
 
 

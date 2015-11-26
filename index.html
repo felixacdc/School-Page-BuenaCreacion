@@ -522,19 +522,19 @@
 					<h3>Escribanos</h3>
 					<p class="text-justify">Si esta interesado en información sobre nuestra institucion, puede llenar el formulario que se encuentra abajo con los datos solicitados, posteriormente uno de nuestros encargados estara comunicandoce con usted.   ¡Gracias!</p>
 					<p>
-						<form class="form-horizontal" role="form" action="../Functions/CallVwUsers.php" method="post">
+						<form class="form-horizontal" role="form" action="Controllers/SendEmail.php" method="post" id="formSend">
 
 						  <div class="form-group">
 						    <label for="inputEmail1" class="control-label control-label-input-group col-lg-10"></label>
 						    <div class="col-lg-10">
-						      <input type="email" class="form-control" id="inputEmail" placeholder="Correo Electronico">
+						      <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Correo Electronico">
 						    </div>
 						  </div>
 
 						  <div class="form-group">
 						    <label for="text1" class="control-label control-label-input-group col-lg-10"></label>
 						    <div class="col-lg-10">
-						      <textarea class="form-control" rows="4" id="textArea" placeholder="Descripcion"></textarea>
+						      <textarea class="form-control" name="message" rows="4" id="textArea" placeholder="Descripcion"></textarea>
 						    </div>
 						  </div>
 						  <div class="form-group">
@@ -542,6 +542,8 @@
 						      <button type="button" class="btn btn-success" id="buttonSend">Enviar</button>
 						    </div>
 						  </div>
+
+						  <input type="hidden" name="valid" value="yes">
 
 					   </form><!-- form -->
 					</p>
