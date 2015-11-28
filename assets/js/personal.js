@@ -57,7 +57,7 @@ function fnValidate(){
 
 
 function fnLoadStartup(){
-	$("#first").addClass("activeOption");
+	$("#first a").addClass("activeOption");
 	$("#first a").click();
 }
 
@@ -73,7 +73,7 @@ $(document).ready(function(){
 	$('#buttonSend').click(fnValidate);
 
 
-	$(".navbar-nav li").click(function(){
+	$(".navbar-nav li a").click(function(){
 		$(".activeOption").removeClass("activeOption");
 		$(this).addClass("activeOption");
 	});	
@@ -92,6 +92,22 @@ $(document).ready(function(){
 	$(document).delegate('textarea','focus',function(){
 		$(this).parent().siblings('label').fadeOut().addClass('bounceOutLeft');
 		$(this).parent().parent().removeClass('has-error has-feedback');
+	});
+
+	$('.option').mouseenter(function() {
+		var li = $(".navbar-nav li a");
+		var id = '#' + $(this).attr('name');
+
+		$(li).each(function(i, element) {
+	        if (id == $(element).attr("href")) {
+	        	$(".activeOption").removeClass("activeOption");
+				$(element).addClass("activeOption");
+	        	console.log(id + ' - ' + $(element).attr("href"));
+	        }else{
+	        	$(element).css('color','#999');
+	        }
+	     });
+
 	});
 
 
