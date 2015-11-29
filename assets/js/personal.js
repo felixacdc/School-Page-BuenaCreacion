@@ -102,7 +102,6 @@ $(document).ready(function(){
 	        if (id == $(element).attr("href")) {
 	        	$(".activeOption").removeClass("activeOption");
 				$(element).addClass("activeOption");
-	        	console.log(id + ' - ' + $(element).attr("href"));
 	        }else{
 	        	$(element).css('color','#999');
 	        }
