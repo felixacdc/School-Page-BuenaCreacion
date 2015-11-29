@@ -112,3 +112,54 @@ $(document).ready(function(){
 });
 
 /*=================== END BODY JS ==================*/
+
+
+/*=================== FUNCIONALIDAD DE PERSONAL ==================*/
+
+$(document).ready(function(){
+   
+    $('#Administrativo').hide();
+    $('#Preprimaria').hide();
+    $('#Primaria').hide();
+    $('#Primaria1').hide();
+    $('#Basico').hide();
+
+
+    $('#Admin').click(function(event){
+        event.preventDefault();
+        $("#Administrativo").show("slow")
+        $('#Principal').hide()
+        $('#Preprimaria').hide()
+        $('#Basico').hide()
+        $('#Primaria').hide()
+    	$('#Primaria1').hide()
+ 	});
+ 	$('#Prepri').click(function(event){
+        event.preventDefault();
+        $("#Preprimaria").show("slow")
+        $('#Administrativo').hide()
+        $('#Primaria').hide()
+    	$('#Primaria1').hide()
+    	$('#Basico').hide()
+ 	});
+ 	$('#Pri').click(function(event){
+        event.preventDefault();
+        $("#Primaria").show("slow")
+        $("#Primaria1").show("slow")
+        $('#Administrativo').hide()
+        $('#Preprimaria').hide()
+        $('#Basico').hide()
+ 	});
+ 	$('#Basic').click(function(event){
+        event.preventDefault();
+        $("#Basico").show("slow")
+        $('#Administrativo').hide()
+        $('#Preprimaria').hide()
+        $('#Primaria').hide()
+    	$('#Primaria1').hide()
+
+ 	});
+});
+
+/*=================== FIN DE FUNCIONALIDADPERSONAL ==================*/
+

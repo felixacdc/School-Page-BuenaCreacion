@@ -7,6 +7,24 @@ textarea{
 
 /* ============= FIN SELECTORES DE TIPO O ETIQUETA ==============*/
 
+/* =============    BOTONES PERSONAL ==============*/
+
+div a h1:hover {
+    		background: #3498DB;
+    		color: #fff;
+    		-webkit-border-radius: 25px;
+			-moz-border-radius: 25px;
+			border-radius: 25px;	
+		}
+		div a h1{
+			height: 100px;
+		}
+
+}
+/* =============    FIN BOTONES PERSONAL ==============*/
+
+
+
 /* ============= SELECTORES DE CLASE ==============*/
 
 .divider1{
