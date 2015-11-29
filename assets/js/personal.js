@@ -117,51 +117,18 @@ $(document).ready(function(){
 /*=================== FUNCIONALIDAD DE PERSONAL ==================*/
 
 $(document).ready(function(){
-   
-    $('#Administrativo').hide();
-    $('#Preprimaria').hide();
-    $('#Primaria').hide();
-    $('#Primaria1').hide();
-    $('#Basico').hide();
+   	
+   	// Usar clase en vez de ids individuales
+    $('.personalNivel').fadeOut();
+    $('#Principal').addClass('personalNivel');
 
+    $('.clickPersonal').click(function() {
+    	event.preventDefault();
+    	var id = $(this).attr("href");
+        $('.personalNivel').fadeOut();
+        $(id).fadeIn();
 
-    $('#Admin').click(function(event){
-        event.preventDefault();
-        $("#Administrativo").show("slow")
-        $('#Principal').hide()
-        $('#Preprimaria').hide()
-        $('#Basico').hide()
-        $('#Primaria').hide()
-    	$('#Primaria1').hide()
- 	});
- 	$('#Prepri').click(function(event){
-        event.preventDefault();
-        $("#Preprimaria").show("slow")
-        $('#Principal').hide()
-        $('#Administrativo').hide()
-        $('#Primaria').hide()
-    	$('#Primaria1').hide()
-    	$('#Basico').hide()
- 	});
- 	$('#Pri').click(function(event){
-        event.preventDefault();
-        $("#Primaria").show("slow")
-        $("#Primaria1").show("slow")
-        $('#Principal').hide()
-        $('#Administrativo').hide()
-        $('#Preprimaria').hide()
-        $('#Basico').hide()
- 	});
- 	$('#Basic').click(function(event){
-        event.preventDefault();
-        $("#Basico").show("slow")
-        $('#Principal').hide()
-        $('#Administrativo').hide()
-        $('#Preprimaria').hide()
-        $('#Primaria').hide()
-    	$('#Primaria1').hide()
-
- 	});
+	});
 });
 
 /*=================== FIN DE FUNCIONALIDADPERSONAL ==================*/
