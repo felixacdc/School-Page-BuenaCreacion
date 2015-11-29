@@ -137,6 +137,7 @@ $(document).ready(function(){
  	$('#Prepri').click(function(event){
         event.preventDefault();
         $("#Preprimaria").show("slow")
+        $('#Principal').hide()
         $('#Administrativo').hide()
         $('#Primaria').hide()
     	$('#Primaria1').hide()
@@ -146,6 +147,7 @@ $(document).ready(function(){
         event.preventDefault();
         $("#Primaria").show("slow")
         $("#Primaria1").show("slow")
+        $('#Principal').hide()
         $('#Administrativo').hide()
         $('#Preprimaria').hide()
         $('#Basico').hide()
@@ -153,6 +155,7 @@ $(document).ready(function(){
  	$('#Basic').click(function(event){
         event.preventDefault();
         $("#Basico").show("slow")
+        $('#Principal').hide()
         $('#Administrativo').hide()
         $('#Preprimaria').hide()
         $('#Primaria').hide()
