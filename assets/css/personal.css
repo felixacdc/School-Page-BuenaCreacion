@@ -31,6 +31,10 @@ textarea{
 	line-height: 1;
 }
 
+.spaceLi{
+	margin-bottom: 10px;
+}
+
 /* ============= FIN SELECTORES DE CLASE ==============*/
 
 /* ============= SELECTORES DE ID ==============*/
