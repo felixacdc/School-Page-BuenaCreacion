@@ -13,8 +13,8 @@ div a h2:hover {
     		color: #fff;
     		-webkit-border-radius: 25px;
 			-moz-border-radius: 25px;
-			border-radius: 25px;	
-		
+			border-radius: 25px;
+
 }
 /* =============    FIN BOTONES PERSONAL ==============*/
 
@@ -54,6 +54,30 @@ div a h2:hover {
 
 #face{
 	cursor: pointer;
+}
+
+.animation.animated-item-1 {
+  -webkit-animation: fadeInUp 400ms linear 400ms both;
+  -moz-animation: fadeInUp 400ms linear 400ms both;
+  -o-animation: fadeInUp 400ms linear 400ms both;
+  -ms-animation: fadeInUp 400ms linear 400ms both;
+  animation: fadeInUp 400ms linear 400ms both;
+}
+
+.animation.animated-item-2 {
+  -webkit-animation: fadeInUp 300ms linear 600ms both;
+  -moz-animation: fadeInUp 300ms linear 600ms both;
+  -o-animation: fadeInUp 300ms linear 600ms both;
+  -ms-animation: fadeInUp 300ms linear 600ms both;
+  animation: fadeInUp 300ms linear 600ms both;
+}
+
+.animation.animated-item-3 {
+  -webkit-animation: fadeInUp 300ms linear 900ms both;
+  -moz-animation: fadeInUp 300ms linear 900ms both;
+  -o-animation: fadeInUp 300ms linear 900ms both;
+  -ms-animation: fadeInUp 300ms linear 900ms both;
+  animation: fadeInUp 300ms linear 900ms both;
 }
 
 /* ============= END SELECTORES DE ID ==============*/

@@ -76,7 +76,7 @@ $(document).ready(function(){
 	$(".navbar-nav li a").click(function(){
 		$(".activeOption").removeClass("activeOption");
 		$(this).addClass("activeOption");
-	});	
+	});
 
 	$("#face").click(function(){
 		url = "https://www.facebook.com/Colegio-Buena-Creaci%C3%B3n-250623778420782/";
@@ -117,19 +117,20 @@ $(document).ready(function(){
 /*=================== FUNCIONALIDAD DE PERSONAL ==================*/
 
 $(document).ready(function(){
-   	
-   	// Usar clase en vez de ids individuales
-    $('.personalNivel').fadeOut();
-    $('#Principal').addClass('personalNivel');
 
-    $('.clickPersonal').click(function() {
-    	event.preventDefault();
-    	var id = $(this).attr("href");
-        $('.personalNivel').fadeOut();
-        $(id).fadeIn();
+	//Initiat WOW JS
+	new WOW().init();
 
+  // Usar clase en vez de ids individuales
+  $('.personalNivel').fadeOut();
+  $('#Principal').addClass('personalNivel');
+
+  $('.clickPersonal').click(function() {
+  	event.preventDefault();
+  	var id = $(this).attr("href");
+      $('.personalNivel').fadeOut();
+      $(id).fadeIn();
 	});
 });
 
 /*=================== FIN DE FUNCIONALIDADPERSONAL ==================*/
-
