@@ -109,10 +109,6 @@ $(document).ready(function(){
 
 	});
 
-
-		//Initiat WOW JS
-		new WOW().init();
-
 });
 
 /*=================== END BODY JS ==================*/
@@ -131,6 +127,8 @@ $(document).ready(function(){
   	var id = $(this).attr("href");
       $('.personalNivel').fadeOut();
       $(id).fadeIn();
+	  var classes= $(id).attr('id');
+	  $('.' + classes).fadeIn();
 	});
 });
 
