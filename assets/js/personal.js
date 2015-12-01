@@ -118,9 +118,6 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-	//Initiat WOW JS
-	new WOW().init();
-
   // Usar clase en vez de ids individuales
   $('.personalNivel').fadeOut();
   $('#Principal').addClass('personalNivel');
