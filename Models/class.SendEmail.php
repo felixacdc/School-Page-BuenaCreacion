@@ -26,7 +26,7 @@ class SendEmail
 	    				  'Content-Type: text/html; charset=iso-8859-1' . "\r\n" .
 	    	  			  'X-Mailer: PHP/' . phpversion();
 
-	    self::$addressee = '94felix23pablo2@gmail.com';
+	    self::$addressee = 'cembuenacreacion7@gmail.com';
 
 	    self::$bodyHtml  = '<div style="background-color:#4B71AB; padding:10px;">
 	    					<h2 style="color:#FFFFFF; font-size:30px; font-weight:100; line-height:115%; text-align:center;">
