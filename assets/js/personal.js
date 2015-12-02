@@ -1,6 +1,6 @@
 /*=================== VARIABLES ==================*/
 var ejecutar = true;
-var verifyEmail = /^([a-zA-Z]+[a-zA-Z0-9._-]*)@{1}([a-z1-9\.]{2,})\.([a-z]{2,3})$/;
+var verifyEmail = /^([a-zA-Z0-9]+[a-zA-Z0-9._-]*)@{1}([a-z1-9\.]{2,})\.([a-z]{2,3})$/;
 var verifyComment = /^[a-zA-Z0-9.,-\/\* ñáéíóú]*$/;
 var url;
 /*=================== END VARIABLES ==================*/
