@@ -639,4 +639,10 @@ a:after {
     .containerMenu{
         width: 100% !important;
     }
+
+    .containerMenu .nav{
+        height: calc(100% - 80px);
+        position: fixed;
+        overflow-y: scroll;
+    }
 }
