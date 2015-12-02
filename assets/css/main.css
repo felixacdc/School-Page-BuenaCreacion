@@ -412,7 +412,7 @@ a:after {
 /* Section Dividers Backgrounds */
 
 .divider1 {
-	background-image: url('../img/bg/divider1.jpg')
+	background-image: url('../img/bg/divider2.jpg')
 }
 
 .divider2 {
@@ -486,7 +486,6 @@ a:after {
     margin: 0;
 }
 
-
 /* ==========================================================================
    Image Mask
    ========================================================================== */
@@ -503,9 +502,10 @@ a:after {
 }
 
 .grid figcaption {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
+    bottom: 50px !important;
 	padding: 20px;
 	color: #fff;
 	background: #3498db;
@@ -535,7 +535,7 @@ a:after {
 
 /* Caption Style */
 .mask figure {
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 
 .mask figure img {
@@ -544,20 +544,12 @@ a:after {
 	transition: transform 0.4s;
 }
 
-.no-touch .mask figure:hover img,
-.mask figure.cs-hover img {
-	-webkit-transform: translateY(-30px);
-	-moz-transform: translateY(-30px);
-	-ms-transform: translateY(-30px);
-	transform: translateY(-30px);
-}
-
 .mask figcaption {
 	height: 50px;
 	width: 100%;
 	top: auto;
 	bottom: 0;
-	opacity: 0;
+	opacity: 1;
 	-webkit-transform: translateY(100%);
 	-moz-transform: translateY(100%);
 	-ms-transform: translateY(100%);
@@ -565,18 +557,6 @@ a:after {
 	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
 	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
 	transition: transform 0.4s, opacity 0.1s 0.3s;
-}
-
-.no-touch .mask figure:hover figcaption,
-.mask figure.cs-hover figcaption {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	-ms-transform: translateY(0px);
-	transform: translateY(0px);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
-	transition: transform 0.4s, opacity 0.1s;
 }
 
 .mask figcaption a {
@@ -637,5 +617,15 @@ a:after {
 		font-size: 30px;
 		line-height: 38px;
 	}
+
+    .title01{
+        font-size: 3.5em !important;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .divider1 h1{
+        font-size: 2em;
+    }
 }
 

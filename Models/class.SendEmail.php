@@ -37,15 +37,10 @@ class SendEmail
 
 	public function fnSendEmail()
 	{
-
 		$this::fnSendMessage($this->email, $this->message);
 
-		if (mail(self::$addressee, self::$title, self::$bodyHtml, self::$headers)) {
-			header('location: ../index.html');
-		} else {
-			header('location: ../index.html');
-		}
-
+		mail(self::$addressee, self::$title, self::$bodyHtml, self::$headers);
+		header('location: ../index.html');
 	}
 
 }
