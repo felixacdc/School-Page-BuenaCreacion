@@ -68,7 +68,7 @@ function fnLoadStartup(){
 $(document).ready(function(){
 
 	fnEmpty();
-	fnLoadStartup();
+	// fnLoadStartup();
 
 	$('#buttonSend').click(fnValidate);
 
@@ -102,11 +102,10 @@ $(document).ready(function(){
 	        if (id == $(element).attr("href")) {
 	        	$(".activeOption").removeClass("activeOption");
 				$(element).addClass("activeOption");
-	        }else{
-	        	$(element).css('color','#999');
 	        }
 	     });
 
+		 $(li).hover(function () {$(this).css('color','white');}, function () {$(this).css('color','#999');});
 	});
 
 });
