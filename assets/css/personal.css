@@ -48,6 +48,11 @@ div a h2:hover {
 	margin-bottom: 10px;
 }
 
+.newsUl li{
+	margin-bottom: 40px;
+}
+
+
 /* ============= FIN SELECTORES DE CLASE ==============*/
 
 /* ============= SELECTORES DE ID ==============*/
