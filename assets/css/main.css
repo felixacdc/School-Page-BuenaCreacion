@@ -638,11 +638,19 @@ a:after {
 @media screen and (max-width: 953px){
     .containerMenu{
         width: 100% !important;
+        padding-right: 0px !important;
+        padding-left: 0px !important;
     }
 
     .containerMenu .nav{
         height: calc(100% - 80px);
         position: fixed;
         overflow-y: scroll;
+    }
+}
+
+@media screen and (max-width: 1215px){
+    .logotipo{
+        display: none;
     }
 }

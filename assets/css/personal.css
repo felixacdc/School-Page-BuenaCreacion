@@ -52,7 +52,13 @@ div a h2:hover {
 	margin-bottom: 40px;
 }
 
+.editorialImg{
+	height:50px;
+}
 
+.editorialImgTwo{
+	height:30px;
+}
 /* ============= FIN SELECTORES DE CLASE ==============*/
 
 /* ============= SELECTORES DE ID ==============*/
