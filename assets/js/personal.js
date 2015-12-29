@@ -121,7 +121,7 @@ $(document).ready(function(){
   $('.personalNivel').fadeOut();
   $('#Principal').addClass('personalNivel');
 
-  $('.clickPersonal').click(function() {
+  $('.clickPersonal').click(function(event) {
   	event.preventDefault();
   	var id = $(this).attr("href");
       $('.personalNivel').fadeOut();
